@@ -15,8 +15,7 @@ db_proxy = Proxy()
 # heroku config:set HEROKU=1
 if 'HEROKU' in os.environ:
     urllib.parse.uses_netloc.append('postgres')
-    url = urlparse(os.environ["DATABASE_URL"])
-	print(url)
+    url = urlparse(os.environ["db452t8nsgc2fj"])
     db = PostgresqlDatabase(database=url.path[1:], user=url.username, password=url.password, host=url.hostname, port=url.port)
     db_proxy.initialize(db)
 else:
