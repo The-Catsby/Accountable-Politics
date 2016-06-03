@@ -16,7 +16,11 @@ db_proxy = Proxy()
 if 'HEROKU' in os.environ:
     urllib.parse.uses_netloc.append('postgres')
     url = urlparse(os.environ["DATABASE_URL"])
-    db = PostgresqlDatabase(database=url.path[1:], user=url.username, password=url.password, host=url.hostname, port=url.port)
+    db = PostgresqlDatabase(database="d343d0v0onci3u", 
+							user="eltlagodrujueu", 
+							password="mtUXH-rzXc-7fdMY5mnKqAOwan", 
+							host="ec2-54-235-179-112.compute-1.amazonaws.com", 
+							port="5432")
     db_proxy.initialize(db)
 else:
     db = SqliteDatabase('accountable.db')
