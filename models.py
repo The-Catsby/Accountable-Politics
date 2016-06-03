@@ -15,7 +15,7 @@ db_proxy = Proxy()
 if 'HEROKU' in os.environ:
     urllib.parse.uses_netloc.append('postgres')
     url = urlparse(os.environ["DATABASE_URL"])
-    db = PostgresqlDatabase(database=' postgres://lyjzjhwwkjgghk:lMPirEGY7yvkH6ewTRat5cGVFI@ec2-50-19-239-232.compute-1.amazonaws.com:5432/dcttr7ohj921b0', 
+    db = PostgresqlDatabase(database='postgres://lyjzjhwwkjgghk:lMPirEGY7yvkH6ewTRat5cGVFI@ec2-50-19-239-232.compute-1.amazonaws.com:5432/dcttr7ohj921b0', 
 							user='lyjzjhwwkjgghk', 
 							password='lMPirEGY7yvkH6ewTRat5cGVFI', 
 							host='ec2-50-19-239-232.compute-1.amazonaws.com', 
